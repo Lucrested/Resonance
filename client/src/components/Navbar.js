@@ -1,29 +1,27 @@
 import React, { useState } from "react";
-import { Navbar, Typography, Button } from "@material-tailwind/react";
+import { Navbar, Typography, Button, list } from "@material-tailwind/react";
 import SignUpOverlay from "./SignUpOverlay";
 
-export default function NavbarWithMegaMenu({ openSignUpOverlay }) {
+export default function NavbarWithMegaMenu({
+  openSignInOverlay,
+  openSignUpOverlay,
+}) {
   return (
-    <Navbar className="bg-gray-400 mx-auto max-w-screen-2xl px-4 py-2 rounded-b-lg">
-      <div className="flex items-center justify-between text-blue-gray-900">
-        <Typography
-          as="a"
-          href="#"
-          variant="h6"
-          className="mr-4 cursor-pointer py-1.5 lg:ml-2"
-        >
+    <nav className="bg-black shadow-xl rounded-none opacity-25">
+      <div className="flex flex-wrap items-center justify-between px-4 py-2 mx-auto max-w-screen-2xl text-white ">
+        <a href="/" className="mr-4 cursor-pointer py-1.5 lg:ml-2 ">
           Logo
-        </Typography>
-        <div className="hidden lg:block"></div>
-        <div className="hidden gap-2 lg:flex">
-          <Button variant="text" size="sm" color="blue-gray">
-            Sign In
-          </Button>
-          <Button variant="gradient" size="sm" onClick={openSignUpOverlay}>
+        </a>
+        <div className="flex items-center gap-3">
+          <button onClick={openSignInOverlay}>Sign In</button>
+          <button
+            className="bg-white text-black rounded-xl px-4 py-2  "
+            onClick={openSignUpOverlay}
+          >
             Sign Up
-          </Button>
+          </button>
         </div>
       </div>
-    </Navbar>
+    </nav>
   );
 }
