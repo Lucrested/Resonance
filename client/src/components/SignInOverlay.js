@@ -31,8 +31,15 @@ function SignInOverlay({ onClose }) {
     }
   };
 
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") handleSignIn();
+  };
+
   return (
-    <div className="flex fixed inset-y-0 w-full h-full bg-gray-500 justify-center items-center ">
+    <div
+      onKeyDown={handleKeyDown}
+      className="flex fixed inset-y-0 w-full h-full bg-gray-500 justify-center items-center "
+    >
       <div className="bg-white p-5 rounded-md">
         <h2 className="flex justify-center pb-4">Sign In</h2>
         <label>

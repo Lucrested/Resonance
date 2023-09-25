@@ -12,10 +12,10 @@ io.on("connection", (socket) => {
   console.log("A user connected");
 });
 
-socket.on("join", (room) => {
-  socket.join(room);
-  console.log(`User ${socket.id} has joined room ${room}`);
-});
+// socket.on("join", (room) => {
+//   socket.join(room);
+//   console.log(`User ${socket.id} has joined room ${room}`);
+// });
 // app.get("/", (req, res) => {
 //   res.sendFile(__dirname + "/index.html");
 // });
