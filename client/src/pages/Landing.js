@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import NavbarWithMegaMenu from "../components/Navbar";
+import NavbarLanding from "../components/NavbarLanding";
 import SignUpOverlay from "../components/SignUpOverlay";
 import SignInOverlay from "../components/SignInOverlay";
 
@@ -25,7 +25,7 @@ export default function Landing() {
   };
   return (
     <div className="bg-gray-800 min-h-screen">
-      <NavbarWithMegaMenu
+      <NavbarLanding
         openSignInOverlay={openSignInOverlay}
         openSignUpOverlay={openSignUpOverlay}
       />

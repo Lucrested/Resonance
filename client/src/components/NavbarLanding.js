@@ -1,8 +1,6 @@
-import React, { useState } from "react";
-import { Navbar, Typography, Button, list } from "@material-tailwind/react";
-import SignUpOverlay from "./SignUpOverlay";
+import React from "react";
 
-export default function NavbarWithMegaMenu({
+export default function NavbarLanding({
   openSignInOverlay,
   openSignUpOverlay,
 }) {
