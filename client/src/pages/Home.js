@@ -4,6 +4,7 @@ import Landing from "./Landing";
 import { useAuth } from "../AuthContext";
 import NavbarHome from "../components/SideBarHome";
 import Chats from "../components/Chats";
+import MessageBox from "../components/MessageBox";
 
 export default function Home() {
   const { session, userData } = useAuth();
@@ -15,6 +16,7 @@ export default function Home() {
       <div className="bg-gray-800 min-h-screen flex ">
         <NavbarHome />
         <Chats />
+        <MessageBox />
       </div>
     );
 }
