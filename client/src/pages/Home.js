@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { useSession } from "@supabase/auth-helpers-react";
 import Landing from "./Landing";
 import { useAuth } from "../AuthContext";
-import NavbarHome from "../components/SideBarHome";
+import SideBarHome from "../components/SideBarHome";
 import Chats from "../components/Chats";
+import ChatRoom from "../components/ChatRoom";
 
 export default function Home() {
   const { session, userData } = useAuth();
@@ -13,8 +14,9 @@ export default function Home() {
   else
     return (
       <div className="bg-gray-800 min-h-screen flex ">
-        <NavbarHome />
+        <SideBarHome />
         <Chats />
+        <ChatRoom />
       </div>
     );
 }
